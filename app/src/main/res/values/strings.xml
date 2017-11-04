@@ -1,12 +1,12 @@
 <resources>
-<string name="app_name">Android Facebook Login HF</string>
+    <string name="app_name">Android Facebook Login HF</string>
 
-<string name="facebook_app_id">531414307195143</string>
-<string name="fb_login_protocol_scheme">fb1065828690183627</string>
+    <string name="facebook_app_id">531414307195143</string>
+    <string name="fb_login_protocol_scheme">fb1065828690183627</string>
 
-<string name="welcome">Welcome to Facebook LOgin App</string>
-<string name="cancel_login">The Operation is Canceled</string>
-<string name="error_login">There is an Error !! </string>
-<string name="logout">Session Closed :)</string>
+    <string name="welcome">Facebook Login App</string>
+    <string name="cancel_login">Cancel</string>
+    <string name="error_login">There is an Error !! </string>
+    <string name="logout">Logout</string>
 
 </resources>

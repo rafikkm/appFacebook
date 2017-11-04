@@ -1,26 +1,47 @@
 package com.example.rafik_000.appfacebook;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
-import com.facebook.login.LoginManager;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.bumptech.glide.Glide;
 import com.facebook.AccessToken;
+import com.facebook.Profile;
+import com.facebook.ProfileTracker;
+import com.facebook.login.LoginManager;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    private ImageView photoImageView;
+    private TextView nameTextView;
+    private TextView idTextView;
+
+    private ProfileTracker profileTracker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         if (AccessToken.getCurrentAccessToken() == null) {
             goLoginScreen();
         }
+
     }
 
     private void goLoginScreen() {
+
+        Log.w("myTag", "Now Going to LoginAct");
+
         Intent intent = new Intent(this, LoginAct.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
@@ -30,4 +51,6 @@ public class MainActivity extends AppCompatActivity {
         LoginManager.getInstance().logOut();
         goLoginScreen();
     }
+
+
 }
