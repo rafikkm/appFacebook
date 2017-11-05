@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.rafik_000.appfacebook">
 
+    <uses-sdk tools:overrideLibrary="com.jsibbold:zoomage" />
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-sdk tools:overrideLibrary="com.jsibbold:zoomage"/>
 
     <application
         android:name=".MainApplication"
@@ -31,7 +32,8 @@
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="Facebook Albums" />
         <activity android:name=".LoginAct" />
-        <activity android:name=".FacebookAlbumsActivity"></activity>
+        <activity android:name=".FacebookAlbumsActivity" />
+        <activity android:name=".AlbumActivity"></activity>
     </application>
 
 </manifest>
