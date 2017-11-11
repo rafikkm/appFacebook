@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/facebook-android-sdk-4.27.0" />
+            <option value="$PROJECT_DIR$/glide-full-4.2.0" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
