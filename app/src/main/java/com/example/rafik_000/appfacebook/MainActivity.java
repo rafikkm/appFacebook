@@ -18,11 +18,6 @@ import com.facebook.login.LoginManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView photoImageView;
-    private TextView nameTextView;
-    private TextView idTextView;
-
-    private ProfileTracker profileTracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void goLoginScreen() {
-
-        Log.w("myTag", "Now Going to LoginAct");
 
         Intent intent = new Intent(this, LoginAct.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -10,15 +10,8 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.login.widget.LoginButton;
 import com.facebook.login.LoginResult;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
-// import android.content.Intent;
- // import android.os.Bundle;
 
-// import android.view.View;
- // import com.facebook.AccessToken;
- // import com.facebook.login.LoginManager;
 
 public class LoginAct extends AppCompatActivity {
 
@@ -42,7 +35,8 @@ public class LoginAct extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
 
-                Log.w("myTag", "Now Going to FacebookALbum");
+                // On successful Login the programs loads the Facebook Album Activity
+
                 goLoFacebookAlbumScreen();
 
             }
