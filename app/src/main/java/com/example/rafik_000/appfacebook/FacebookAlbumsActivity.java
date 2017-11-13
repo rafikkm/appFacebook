@@ -53,8 +53,8 @@ public class FacebookAlbumsActivity extends AppCompatActivity {
     ArrayList<HashMap<String, String>> albumList = new ArrayList<HashMap<String, String>>();
     HashMap<String, String> map = new HashMap<String, String>();
 
-        /////////////////////////////////////////////////////////////////////////////////////
-  // Pagination Variables
+    /////////////////////////////////////////////////////////////////////////////////////
+    // Pagination Variables
 
     public int currentPage = 1;
     public int displayPerPage = 6;  // Number of Albums displayed per Page
@@ -75,9 +75,9 @@ public class FacebookAlbumsActivity extends AppCompatActivity {
 
         ///////////////// Preparing The Paginated GridView //////////////////////////
 
-       galleryGridView = (GridView) findViewById(R.id.galleryGridView);
+        galleryGridView = (GridView) findViewById(R.id.galleryGridView);
         // Next
-       btnNext = (Button) findViewById(R.id.btnNext);
+        btnNext = (Button) findViewById(R.id.btnNext);
         // Perform action on click
         btnNext.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -114,7 +114,7 @@ public class FacebookAlbumsActivity extends AppCompatActivity {
         Bundle parameters = new Bundle();
         parameters.putString("fields", "link,name,count");
 
-                new GraphRequest(
+        new GraphRequest(
                 AccessToken.getCurrentAccessToken(),  //your fb AccessToken
                 "/" + AccessToken.getCurrentAccessToken().getUserId() + "/albums" ,//user id of login user
                 parameters,
@@ -149,7 +149,7 @@ public class FacebookAlbumsActivity extends AppCompatActivity {
 //
                                     }
 
-                                   progressShowData();
+                                    progressShowData();
 
 
                                 }
@@ -239,7 +239,7 @@ public class FacebookAlbumsActivity extends AppCompatActivity {
             data = d;
         }
         public int getCount() {//
-          //  return data.size();
+            //  return data.size();
             if(displayPerPage > TotalRows - indexRowStart)
             {
                 return TotalRows - indexRowStart;
@@ -264,7 +264,7 @@ public class FacebookAlbumsActivity extends AppCompatActivity {
                 convertView = LayoutInflater.from(activity).inflate(
                         R.layout.album_row, parent, false);
 
-               holder.galleryImage = (ImageView) convertView.findViewById(R.id.galleryImage);
+                holder.galleryImage = (ImageView) convertView.findViewById(R.id.galleryImage);
                 holder.gallery_count = (TextView) convertView.findViewById(R.id.gallery_count);
                 holder.gallery_title = (TextView) convertView.findViewById(R.id.gallery_title);
 
@@ -304,13 +304,3 @@ public class FacebookAlbumsActivity extends AppCompatActivity {
 
 
 }
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-

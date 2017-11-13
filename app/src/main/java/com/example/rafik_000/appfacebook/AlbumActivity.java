@@ -212,7 +212,7 @@ public class AlbumActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     final int position, long id) {
                 Intent intent = new Intent(AlbumActivity.this, GalleryPreview.class);
-                intent.putExtra("path", imageList.get(+position).get("image_id"));
+                intent.putExtra("path", imageList.get(+position+indexRowStart).get("image_id"));
                 startActivity(intent);
             }
         });
@@ -279,5 +279,3 @@ public class AlbumActivity extends AppCompatActivity {
         ImageView galleryImage;
     }
 }
-
-
